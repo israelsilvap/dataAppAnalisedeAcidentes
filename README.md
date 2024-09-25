@@ -14,6 +14,7 @@ Você pode acessar a aplicação através do seguinte link:
 - Análises gráficas e estatísticas.
 - Filtros para a personalização dos dados exibidos.
 - Interface amigável e de fácil navegação.
+- Utilizando um modelo de Machine Learning (Random Forest), a aplicação permite prever a gravidade de acidentes.
 
 ## Tecnologias Utilizadas
 
