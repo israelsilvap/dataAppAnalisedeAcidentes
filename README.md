@@ -1,4 +1,4 @@
-# DataApp - Análise de Acidentes
+# DataApp - Análise de Acidentes em 2023
 
 Este projeto consiste em uma aplicação web desenvolvida para a análise de acidentes de trânsito. Utilizando dados reais, a aplicação oferece visualizações e insights que ajudam a entender melhor os padrões e causas dos acidentes.
 
@@ -35,7 +35,7 @@ Você pode acessar a aplicação através do seguinte link:
     pip install -r requirements.txt
 4. Execute a aplicação:
    ```bash
-    streamlit run app.py
+    streamlit run main.py
 
 ## Contribuições
 Contribuições são bem-vindas! Se você tiver sugestões, correções ou novas ideias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
