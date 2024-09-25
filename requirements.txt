@@ -1,7 +1,7 @@
-pip install streamlit
-pip install pandas
-pip install matplotlib
-pip install seaborn
-pip install plotly
-pip install scikit-learn
-pip install imbalanced-learn
+streamlit
+pandas
+matplotlib
+seaborn
+plotly
+scikit-learn
+imbalanced-learn
