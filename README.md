@@ -12,7 +12,7 @@ Você pode acessar a aplicação através do seguinte link:
 
 Para uma descrição detalhada do processo OSEMN aplicado ao problema analisado, acesse o notebook através do link abaixo:
 
-[Notebook OSEMN](https://github.com/israelsilvap/dataAppAnalisedeAcidentes/blob/atualizacao_data_app/Trabalho-Final-Top-Computacao.ipynb)
+[Notebook OSEMN](https://colab.research.google.com/drive/1lv_F2_AcU9Wigm7TJz-SDtsDeMm51-Fx?usp=sharing)
 
 ## Funcionalidades
 
