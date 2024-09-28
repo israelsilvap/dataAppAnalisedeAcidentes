@@ -8,6 +8,12 @@ Você pode acessar a aplicação através do seguinte link:
 
 [DataApp - Análise de Acidentes](https://dataapp-accident-analysis.streamlit.app/)
 
+## Notebook OSEMN
+
+Para uma descrição detalhada do processo OSEMN aplicado ao problema analisado, acesse o notebook através do link abaixo:
+
+[Notebook OSEMN](https://github.com/israelsilvap/dataAppAnalisedeAcidentes/blob/atualizacao_data_app/Trabalho-Final-Top-Computacao.ipynb)
+
 ## Funcionalidades
 
 - Visualização de dados sobre acidentes de trânsito.
