@@ -27,7 +27,7 @@ Você pode acessar a aplicação através do seguinte link:
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/dataAppAnalisedeAcidentes.git
+   git clone https://github.com/israelsilvap/dataAppAnalisedeAcidentes.git
 2. Navegue até o diretório do projeto:
    ```bash
     cd dataAppAnalisedeAcidentes

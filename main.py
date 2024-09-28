@@ -246,6 +246,26 @@ else:
         # Gráfico: Distribuição das Condições Climáticas
         if option2 == 'Distribuição das Condições Climáticas':
             st.markdown("<h3 style='text-align: center;'>Distribuição das Condições Climáticas</h3>", unsafe_allow_html=True)
+
+            st.markdown('''
+                            <style>
+                            .justified-text {
+                                text-align: justify;
+                            }
+                            </style>
+                            <br>
+                            <div class="justified-text">
+                                Os gráficos a seguir apresentam dados sobre acidentes de trânsito em diferentes condições climáticas. 
+                                O da esquerda mostra a Distribuição das Condições Climáticas em Acidentes, ilustrando a 
+                                frequência de acidentes sob cada condição específica, como Céu Claro, Nublado e Chuva. 
+                                Já o da direita exibe a Distribuição de Mortes por Condição Climática, representando a proporção 
+                                de fatalidades associadas a cada tipo de condição climática, permitindo uma comparação visual entre 
+                                a quantidade de acidentes e a gravidade das consequências em termos de mortalidade para cada condição.
+                            </div>
+                            <br>
+                        ''', unsafe_allow_html=True)
+
+
             col1, col2 = st.columns(2)
 
             with col1:
@@ -279,6 +299,8 @@ else:
                 ax.legend(wedges, df_grouped_clima_sorted.index, loc="center left", bbox_to_anchor=(1, 0.5))
                 st.pyplot(fig)
 
+            
+
         elif option2 == 'Top Causas de Acidentes':
             st.markdown("<h3 style='text-align: center;'>Top Causas de Acidentes </h3>", unsafe_allow_html=True)
 
@@ -292,6 +314,22 @@ else:
             # Obter os rótulos originais e quebrar automaticamente os longos para o segundo gráfico
             labels_mortes = df_filtrado.groupby('causa_acidente')['mortos'].sum().sort_values(ascending=False).head(10).index
             wrapped_labels_mortes = [textwrap.fill(label, max_label_length) for label in labels_mortes]
+
+            st.markdown('''
+                <style>
+                .justified-text {
+                    text-align: justify;
+                }
+                </style>
+                <br>
+                <div class="justified-text">
+                    Os gráficos apresentam as principais causas de acidentes de trânsito e as principais causas 
+                    de acidentes relacionados a mortes. No primeiro gráfico, vemos as infrações mais frequentes 
+                    que resultam em acidentes, enquanto no segundo gráfico são destacadas as causas que mais resultam 
+                    em fatalidades.
+                </div>
+                <br>
+            ''', unsafe_allow_html=True)
 
             # Criar duas colunas lado a lado
             col1, col2 = st.columns(2)
@@ -344,6 +382,23 @@ else:
             labels = df_grouped_tipo_acidente_impacto.index
             wrapped_labels = [textwrap.fill(label, max_label_length) for label in labels]
 
+            st.markdown('''
+                            <style>
+                            .justified-text {
+                                text-align: justify;
+                            }
+                            </style>
+                            <br>
+                            <div class="justified-text">
+                                O gráfico apresenta os 10 principais tipos de acidentes de trânsito, classificados de acordo 
+                                com a gravidade das consequências, incluindo o número total de mortos, feridos graves e feridos leves. 
+                                As categorias estão organizadas com base no tipo de acidente, e as barras representam o somatório 
+                                de cada tipo de consequência (mortos, feridos graves e feridos leves), permitindo uma visualização 
+                                das diferentes magnitudes de danos causados por cada tipo de ocorrência.
+                            </div>
+                            <br>
+                        ''', unsafe_allow_html=True)
+
             # Configurar as colunas para limitar a área do gráfico
             col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
@@ -366,6 +421,23 @@ else:
             # Calcular a gravidade dos acidentes ao longo do dia
             data = df_filtrado.groupby('horario')[['mortos', 'feridos_graves']].sum()
 
+            st.markdown('''
+                            <style>
+                            .justified-text {
+                                text-align: justify;
+                            }
+                            </style>
+                            <br>
+                            <div class="justified-text">
+                               O gráfico apresenta a distribuição da gravidade dos acidentes de trânsito ao longo do dia, 
+                                separando os dados entre mortos e feridos graves. O eixo horizontal indica as horas do dia, 
+                                enquanto o eixo vertical representa o total de mortos e feridos graves. As duas linhas 
+                                traçadas ilustram como esses dois tipos de consequências variam em quantidade conforme a hora do dia, 
+                                permitindo uma visualização das faixas horárias com maior ou menor número de ocorrências graves.
+                            </div>
+                            <br>
+                        ''', unsafe_allow_html=True)
+
             # Configurar as colunas para limitar a área do gráfico
             col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
@@ -382,6 +454,23 @@ else:
         # Gráfico: Distribuição de Acidentes por Estado (UF)
         elif option2 == 'Distribuição de Acidentes por Estado (UF)':
             st.markdown("<h3 style='text-align: center;'>Distribuição de Acidentes por Estado (UF)</h3>", unsafe_allow_html=True)
+
+            st.markdown('''
+                            <style>
+                            .justified-text {
+                                text-align: justify;
+                            }
+                            </style>
+                            <br>
+                            <div class="justified-text">
+                               O gráfico apresentado ilustra a distribuição de acidentes por estado (UF) no Brasil. 
+                               No eixo horizontal, estão listadas as unidades federativas (UFs) representando os estados 
+                               brasileiros, enquanto o eixo vertical indica o número de acidentes ocorridos em cada estado. 
+                               As barras verticais, de cor roxa, representam a quantidade de acidentes por estado, proporcionando 
+                               uma visão geral de quais estados possuem os maiores e menores números de incidentes registrados.
+                            </div>
+                            <br>
+                        ''', unsafe_allow_html=True)
             
             # Configurar as colunas para limitar a área do gráfico
             col1, col2, col3 = st.columns([1, 5, 1])
@@ -398,6 +487,23 @@ else:
         # Gráfico: Top 10 BRs com Mais Acidentes
         elif option2 == 'Top 10 BRs com Mais Acidentes':
             st.markdown("<h3 style='text-align: center;'>Top 10 BRs com Mais Acidentes</h3>", unsafe_allow_html=True)
+
+            st.markdown('''
+                            <style>
+                            .justified-text {
+                                text-align: justify;
+                            }
+                            </style>
+                            <br>
+                            <div class="justified-text">
+                                O gráfico exibe o "Top 10 BRs com Mais Acidentes", mostrando as 10 rodovias federais (BRs) 
+                                com maior número de acidentes registrados. No eixo horizontal, estão representadas as rodovias 
+                                identificadas por seus números, enquanto o eixo vertical mostra a quantidade de acidentes ocorridos 
+                                em cada uma delas. As barras azuis indicam a frequência de acidentes em cada BR, permitindo uma 
+                                comparação visual entre as rodovias mais perigosas em termos de incidentes.
+                            </div>
+                            <br>
+                        ''', unsafe_allow_html=True)
 
             # Contagem de acidentes por BR
             br_accident_count = df_filtrado['br'].value_counts().reset_index()
@@ -454,6 +560,24 @@ else:
         if option4 == 'Matriz de Confusão':
             st.markdown("<h3 style='text-align: center;'>Matriz de Confusão</h3>", unsafe_allow_html=True)
 
+            st.markdown('''
+                            <style>
+                            .justified-text {
+                                text-align: justify;
+                            }
+                            </style>
+                            <br>
+                            <div class="justified-text">
+                                A partir da matriz de confusão abaixo, é possível inferirmos que o modelo tem um desempenho sólido, 
+                                com uma alta acurácia geral (95,25%). Isso pode ser observado principalmente na correta classificação 
+                                de acidentes "Com Vítimas Fatais" e "Sem Vítimas". Esses dois grupos possuem números muito baixos de erros, 
+                                indicando que o modelo tem uma boa compreensão desses extremos. Entretanto, na classe "Com Vítimas Feridas" 
+                                encontra-se o maior desafio do modelo. Embora o número de classificações corretas (8.984) seja alto, 
+                                essa classe apresentou 1.320 erros, o que mostra um valor considerável de imprecisão.
+                            </div>
+                            <br>
+                        ''', unsafe_allow_html=True)
+
             # Configurar as colunas para limitar a área do gráfico
             col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
@@ -477,6 +601,25 @@ else:
         elif option4 == 'Importância das Features':
             st.markdown("<h3 style='text-align: center;'>Importância das Features no Modelo Random Forest</h3>", unsafe_allow_html=True)
 
+            st.markdown('''
+                            <style>
+                            .justified-text {
+                                text-align: justify;
+                            }
+                            </style>
+                            <br>
+                            <div class="justified-text">
+                                A interpretação do gráfico sugere que as variáveis relacionadas à localização geográfica
+                                 (latitude, longitude) e ao tipo de acidente são as mais importantes para o modelo prever 
+                                a gravidade dos acidentes. Outros fatores como causa do acidente e horário também têm impacto 
+                                significativo. Isso nos permite inferir que fatores tanto geográficos quanto temporais desempenham
+                                 um papel crucial na severidade dos acidentes. Essa análise pode guiar futuras investigações e ações 
+                                preventivas, focando em áreas de risco ou em causas que aparecem frequentemente associadas a 
+                                acidentes graves.
+                            </div>
+                            <br>
+                        ''', unsafe_allow_html=True)
+
             # Configurar as colunas para limitar a área do gráfico
             col1, col2, col3 = st.columns([1, 5, 1])
             with col2:
@@ -493,6 +636,23 @@ else:
 
         elif option4 == 'Curva ROC':
             st.markdown("<h3 style='text-align: center;'>Curva ROC</h3>", unsafe_allow_html=True)
+
+            st.markdown('''
+                            <style>
+                            .justified-text {
+                                text-align: justify;
+                            }
+                            </style>
+                            <br>
+                            <div class="justified-text">
+                                A curva ROC presente abaixo mostra que o modelo é eficiente para distinguir entre as classes 
+                                de acidentes, sendo mais preciso para acidentes "Com Vítimas Fatais". No entanto, para a classe 
+                                "Com Vítimas Feridas", há uma leve queda na performance, sugerindo que esse grupo pode ser mais 
+                                difícil de classificar corretamente. Isso pode ser usado para ajustar o modelo e melhorar ainda 
+                                mais sua precisão para essa classe específica.
+                            </div>
+                            <br>
+                        ''', unsafe_allow_html=True)
 
             # Configurar as colunas para limitar a área do gráfico
             col1, col2, col3 = st.columns([1, 5, 1])
