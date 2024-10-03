@@ -8,7 +8,7 @@ Você pode acessar a aplicação através do seguinte link:
 
 [DataApp - Análise de Acidentes](https://dataapp-accident-analysis.streamlit.app/)
 
-<img src="\img\home.jpg" style="height:18rem;" /> 
+<img src="\img\home.jpg" style="height:25rem;" /> 
 
 ## Notebook OSEMN
 
