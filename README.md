@@ -8,6 +8,8 @@ Você pode acessar a aplicação através do seguinte link:
 
 [DataApp - Análise de Acidentes](https://dataapp-accident-analysis.streamlit.app/)
 
+<img src="D:\israe\Documents\dataAppAnalisedeAcidentes\img\home.jpg" style="height:18rem;" /> 
+
 ## Notebook OSEMN
 
 Para uma descrição detalhada do processo OSEMN aplicado ao problema analisado, acesse o notebook através do link abaixo:
